@@ -1,0 +1,98 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #c1c1c1;
+    background-image: url('./thinker.jpeg');
+    background-position: center;
+    gap: 50px;
+}
+
+.steps{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+    color: #cfcfcf ;
+    font-weight: 700;
+    text-align: center;
+}
+
+.center-x{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.small-circle{
+    border-radius: 100%;
+    background-color: #5865f2;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.small-circle:hover{
+    background-color: #cfcfcf;
+    color: #5865f2;
+}
+
+.sections{
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: justify;
+    color: #c1c1c1;
+}
+
+.steps-cont{
+    display: flex;
+    width: 400px;
+    gap: 8px;
+}
+
+.right{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.left{
+    display: flex;
+    gap: 10px;
+}
+
+.circle-big{
+    border-style:solid;
+    border-color: #5865f2;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    min-width: 60px;
+    max-width: 100px;
+    max-height: 100px;
+
+}
+
+
+@media only screen and (max-width: 645px){
+    .circle-big{
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+}

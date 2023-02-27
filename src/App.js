@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React, { lazy, Suspense } from 'react';
 import './App.css';
+import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
+import Nav from './components/Nav/Nav';
+import Footer from './components/footer';
+
+const Landing = lazy(() => import('./components/Landing/Landing'));
+const Articles = lazy(() => import('./components/articles'));
+const Arcicle = lazy(() => import('./components/article'));
+
+const routes = [
+  {
+    path: '/articles/:title',
+    element: <Arcicle />
+  },
+  {
+    path: '/articles',
+    element: <Articles />
+  },
+  {
+    path: '/',
+    element: <Landing />
+  },
+  
+]
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const element = useRoutes(routes);
+  return element;
 }
 
-export default App;
+function AppWithRouter() {
+  return(
+    <Router>
+      <Nav />
+      <Suspense fallback={<h1 style={{PaddingTop: 50}} className='vh-100'>Loading...</h1>}>
+          <App/>
+      </Suspense>
+      <Footer />
+    </Router>
+  )
+}
+
+export default AppWithRouter;
