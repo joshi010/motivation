@@ -2,6 +2,10 @@ html{
     scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+    width: 0;
+}
+
 .bg-default{
     background-color: #1c1c1c ;
 }
@@ -145,6 +149,8 @@ footer{
     width: 100%;
     margin: 15px 0;
 }
+
+
 
 @media only screen and (max-width: 768px){
     .margins{

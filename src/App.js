@@ -1,6 +1,6 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import './App.css';
-import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
+import { BrowserRouter as Router, useRoutes, useLocation } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
 import Footer from './components/footer';
 
@@ -26,15 +26,21 @@ const routes = [
 
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   const element = useRoutes(routes);
   return element;
 }
 
 function AppWithRouter() {
+
   return(
     <Router>
       <Nav />
-      <Suspense fallback={<h1 style={{PaddingTop: 50}} className='vh-100'>Loading...</h1>}>
+      <Suspense fallback={<h1 style={{PaddingTop: 50, display:'flex', alignItems:'center', justifyContent:'center'}} className='vh-100'>Loading...</h1>}>
           <App/>
       </Suspense>
       <Footer />

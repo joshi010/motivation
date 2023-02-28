@@ -1,10 +1,13 @@
 import React from "react";
 import './Nav.css';
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 export default function Nav() {
 
+    const handleClick = () => {
+        document.querySelector('.lists-nav').classList.toggle('list-nav-active');
+    }
 
     return(
         <nav>
@@ -12,12 +15,32 @@ export default function Nav() {
                 TAKE ACTION
             </div>
 
-            <ul>
-                <li><NavLink className="naving" to='/'>Home</NavLink></li>
-                <li><NavLink className="naving" to='/articles'>Articles</NavLink></li>
-                <li>Plans</li>
-                <li>About</li>
+            <ul className="lists-nav">
+                <li onClick={handleClick} ><NavLink className="naving" to='/'>Home</NavLink></li>
+                <li onClick={handleClick}><NavLink className="naving" to='/articles'>Articles</NavLink></li>
+                <li onClick={handleClick}>Plans</li>
+                <li onClick={handleClick} >About</li>
+                <li style={{height: 10}} className="close" onClick={handleClick}>
+                    <div id="cl-1" className="close-line">
+
+                    </div>
+                    <div id="cl-2" className="close-line">
+
+                    </div>
+                </li>
             </ul>
+
+            <div className="ham" onClick={handleClick}>
+                <div className="ham-line">
+
+                </div>
+                <div className="ham-line">
+
+                </div>
+                <div className="ham-line">
+
+                </div>
+            </div>
         </nav>
     )
 }

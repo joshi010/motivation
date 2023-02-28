@@ -10,7 +10,7 @@ export default function Articles() {
     return(
         <div className="vh-100 bg-default center-x">
             <Helmet>
-                <title>Articles That Motivate You</title>
+                <title>Articles That Will Motivate You</title>
                 
             </Helmet>
             <section className="margins">

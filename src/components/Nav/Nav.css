@@ -4,8 +4,7 @@
 }
 
 nav{
-    position: sticky;
-    top: 0;
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +12,46 @@ nav{
     height: 50px;
     background-color: #323232 ;
     color: #c1c1c1 ;
+    z-index: 2;
+}
+
+.ham{
+    display: none !important;
+    height: 20px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 10px;
+}
+
+.ham-line{
+    height: 30%;
+    background-color: #9c9c9c;
+}
+
+.close{
+    display: none !important;
+    height: 50px !important;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.close-line{
+    position: absolute;
+    height: 10px;
+    width: 60px;
+    background: #5865f2;
+    box-shadow: 0 0 2px rgb(75, 75, 75);
+}
+
+#cl-1{
+    rotate: 45deg;
+}
+
+#cl-2{
+    rotate: -45deg;
 }
 
 .naving{
@@ -22,15 +61,16 @@ nav{
 .logo{
     position: absolute;
     left: 10px;
+    z-index: 2;
 }
 
-ul{
+.lists-nav{
     display: flex;
     align-items: center;
     justify-content: center;
     list-style-type: none;
     gap: 15px;
-    height: 100%;
+    z-index: 1;
 }
 
 li{
@@ -38,4 +78,38 @@ li{
     align-items: center;
     padding: 0 10px;
     height: 100%;
+}
+
+
+@media only screen and (max-width: 645px){
+
+    nav{
+        justify-content: end;
+    }
+
+    .ham{
+        display: flex !important;
+        cursor: pointer;
+    }
+
+    .lists-nav{
+        position: absolute;
+        top: 50px;
+        right:-645px;
+        flex-direction: column;
+        gap: 50px;
+        padding: 50px;
+        background-color: #161616;
+        font-size: 25px;
+        font-weight: 700;
+        transition: all 0.3s;
+    }
+
+    .list-nav-active{
+        right: 0 !important;
+    }
+
+    .close{
+        display: flex !important;
+    }
 }
