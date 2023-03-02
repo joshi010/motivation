@@ -97,6 +97,7 @@ footer{
     align-items: center;
     color: #000;
     background-color: #0e0e0e;
+    overflow: hidden;
 }
 
 .image-cont{
@@ -116,7 +117,7 @@ footer{
 .title-spacing{
     background-color: #00000069;
     text-shadow: 2px 1px 1px #5865f2;
-    padding: 50px 0;
+    padding: 100px 10px 50px;
 }
 
 .artis{
@@ -152,7 +153,7 @@ footer{
 
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1024px){
     .margins{
         width: 90%;
     }
