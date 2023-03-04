@@ -1,0 +1,62 @@
+
+
+.take-action-form{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.take-action-form fieldset{
+    all: unset;
+    width: 90%;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-items: center;
+}
+
+.take-action-form label{
+    min-width: 66px;
+}
+
+.take-action-form fieldset input{
+    all: unset;
+    border-bottom: 2px solid;
+    border-bottom-color: #1c1c1c;
+    width: 70%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+
+.take-action-form fieldset textarea{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    resize: none;
+    border: none;
+    background-color:unset;
+    border-bottom: 2px solid;
+    border-bottom-color: #1c1c1c;
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    color: aliceblue;
+}
+
+.take-action-form fieldset textarea:focus{
+    outline: none;
+}
+
+.take-action-form fieldset textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+#messege{
+   height: fit-content;
+   height: 100px;
+   min-height: 100px;
+}

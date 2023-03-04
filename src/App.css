@@ -3,7 +3,7 @@ html{
     background-color: #1c1c1c;
 }
 
-body::-webkit-scrollbar {
+.wrapper::-webkit-scrollbar {
     width: 0;
 }
 
@@ -65,18 +65,43 @@ button, .link-button:hover{
 }
 
 footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+    align-content: center;
     position: relative;
     bottom: 0;
     background-color: #000;
-    display: flex;
+    padding: 40px 0;
     color: #818181;
 }
 
+.footer-link{
+    color: #c1c1c1c2;
+}
+
 .about-us{
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-self: center;
+    gap: 30px;
 }
+
+.about-us ul li{
+    padding: 0;
+}
+
+.formDataFooter{
+    text-align: center;
+    grid-column: 1 / 3;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
 
 .about-us ul{
     display: flex;
@@ -182,5 +207,14 @@ footer{
 
     .img-art-cont{
         width: 100%;
+    }
+
+    .formDataFooter{
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    footer{
+        gap: 70px;
     }
 }

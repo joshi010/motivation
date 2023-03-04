@@ -2,7 +2,7 @@ import React, { lazy, Suspense, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, useRoutes, useLocation } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
-import Footer from './components/footer';
+import Footer from './components/footer/footer';
 
 const Landing = lazy(() => import('./components/Landing/Landing'));
 const Articles = lazy(() => import('./components/articles'));
