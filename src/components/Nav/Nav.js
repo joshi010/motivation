@@ -12,7 +12,7 @@ export default function Nav() {
     return(
         <nav>
             <div className="logo">
-                BetterSteps
+                <NavLink style={{color:'#c1c1c1', textDecoration:'none'}} to='/'><span onClick={handleClick}>BetterSteps</span></NavLink>
             </div>
 
             <ul className="lists-nav">

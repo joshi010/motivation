@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from 'react-redux';
 import {selectArticles} from './article-slice';
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 export default function Article() {
@@ -29,7 +29,7 @@ export default function Article() {
                 <p>{article.body}</p>
             </div>
             <div className="link-pupop">
-                <a className="link-button">Break Addictions</a>
+                <Link className="link-button" to='/plans'>Break Addictions</Link>
             </div>
         </div>
     ) : <p>Not found</p>

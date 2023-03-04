@@ -3,7 +3,7 @@ import Phrase from "../Phrase";
 import { article } from "../landingArt";
 import { Helmet } from "react-helmet";
 import thinker from './thinker.jpeg';
-import Footer from "../footer";
+import { Link } from "react-router-dom";
 import './Landing.css';
 
 export default function Landing() {
@@ -13,7 +13,8 @@ export default function Landing() {
     return(
         <div style={{overflow:'hidden'}} className="bg-default">
             <Helmet>
-                <title>Home-Motivational</title>
+                <title>BetterSteps - Achieving Your Goals One Step at a Time</title>
+                <meta name="description" content="BetterSteps offers expert advice and motivation to help you achieve your goals and become a better version of yourself. Explore our comprehensive library of articles and start your journey today."/>
             </Helmet>
             <div className="wrapper">
                 <header>
@@ -25,20 +26,6 @@ export default function Landing() {
                 </header>
                 <div className="bg-default" style={{padding: '50px 0'}}>                
                     <div style={{marginBottom: 100}}>
-                        <div id="secs" className="steps">
-                            <div>
-                                <div className="small-circle">1</div>
-                            </div>
-                            <div>
-                                <div className="small-circle">2</div>
-                            </div>
-                            <div>
-                                <div className="small-circle">3</div>
-                            </div>
-                            <div>
-                                <div className="small-circle">4</div>
-                            </div>
-                        </div>
 
                         <div className="steps">
                             <h2>There Are the 4 Base Steps on Taking Action</h2>
@@ -83,13 +70,12 @@ export default function Landing() {
                                 <h2 style={{fontSize: 40}}>Break Your Adiction</h2>
                                 <p>Breaking free from addiction is a crucial step towards gaining control of one's life and embarking on the path towards achieving personal goals.</p>
                             </div>
-                            <a className="link-button" href="#">Take Action</a>
+                            <Link to='/plans' className="link-button">Take Action</Link>
                         </div>
                         <hr></hr>
                     </div>
                 </div>
             
-                <Footer />
             </div>
 
 
