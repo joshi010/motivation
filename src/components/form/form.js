@@ -3,6 +3,7 @@ import './form.css';
 
 
 export default function Form(){
+    const [submit, setSubmit] = useState(false)
     const [formData, setFormData] = useState({
         "entry.119062118": "",
         "entry.1316435799": "",
@@ -19,6 +20,7 @@ export default function Form(){
 
     async function handleSubmit(e) {
         e.preventDefault();
+        setSubmit(true);
 
         let url = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSdtszha0B5DB_KuMCUs9cuVitZyuPPRWmJF7RotHx45KgqkeA/formResponse?entry.119062118=${formData["entry.119062118"]}&entry.1316435799=${formData["entry.1316435799"]}`;
         const res = await fetch(url, {
@@ -32,7 +34,13 @@ export default function Form(){
 
     return(
         <div className="formcontact">
-            <form className="take-action-form" onSubmit={handleSubmit} target="_self">
+            {
+                submit ? (
+                    <div className="after-submit">
+                        <h4 style={{color: '#c1c1c1c2'}}>Sent Successfully</h4>
+                    </div>
+                ) : (
+                <form className="take-action-form" onSubmit={handleSubmit} target="_self">
                 <fieldset>
                     <label htmlFor="entry.119062118">E-mail:</label>
                     <input 
@@ -40,7 +48,7 @@ export default function Form(){
                         type="email"
                         name="entry.119062118"
                         onChange={hanldeInputData("entry.119062118")}
-                        value={formData["entry.119062118"]}
+                        value={formData["entry.119062118"] || ''}
                         autoComplete={false}
                           
                     />
@@ -53,7 +61,7 @@ export default function Form(){
                         type="text"
                         name="entry.1316435799"
                         onChange={hanldeInputData("entry.1316435799")}
-                        value={formData["entry.1316435799"]}
+                        value={formData["entry.1316435799"] || ''}
                         placeholder="Write the reason you're doing this. Ex. You're quitting smoking because you value your health and want to live a longer, happier life."
                         
                     />
@@ -61,6 +69,9 @@ export default function Form(){
 
                 <button type="submit" className="link-button">Motivate Me</button>
             </form>
+
+            )}
+
         </div>
     )
 }
