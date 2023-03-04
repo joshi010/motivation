@@ -24,7 +24,7 @@ export default function Landing() {
                     </div>
                     <a href="#secs" className="link-button">Take Action</a>
                 </header>
-                <div className="bg-default" style={{padding: '50px 0'}}>                
+                <div id="secs" className="bg-default" style={{padding: '50px 0'}}>                
                     <div style={{marginBottom: 100}}>
 
                         <div className="steps">
