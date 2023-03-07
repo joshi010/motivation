@@ -3,28 +3,37 @@ import './App.css';
 import { BrowserRouter as Router, useRoutes, useLocation } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
 import Footer from './components/footer/footer';
-
 const Landing = lazy(() => import('./components/Landing/Landing'));
 const Articles = lazy(() => import('./components/articles'));
 const Arcicle = lazy(() => import('./components/article'));
-const Plans = lazy(() => import('./components/plans'));
+const Plans = lazy(() => import('./components/plans/plans'));
+const Plan = lazy(() => import('./components/plans/plan'));
+const NotFound = lazy(() => import('./components/notfound'));
 
 const routes = [
   {
-    path: '/plans',
-    element: <Plans />
+    path: '*',
+    element: <NotFound />
   },
   {
-    path: '/articles/:title',
-    element: <Arcicle />
+    path: '/',
+    element: <Landing />
+  },
+  {
+    path: '/plans',
+    element: <Plans />
   },
   {
     path: '/articles',
     element: <Articles />
   },
   {
-    path: '/',
-    element: <Landing />
+    path: '/plans/:plan',
+    element: <Plan />
+  },
+  {
+    path: '/articles/:title',
+    element: <Arcicle />
   },
   
 ]

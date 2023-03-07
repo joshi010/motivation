@@ -15,6 +15,10 @@ h1, h2, h3, p{
     color: #c1c1c1;
 }
 
+.section-title{
+    padding: 50px 0;
+}
+
 h3{
     font-size: 23px;
 }

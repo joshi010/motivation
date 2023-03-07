@@ -1,0 +1,25 @@
+.plans-card{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    background-color: #2b2b2b56;
+    gap: 15px;
+    text-align: justify;
+}
+
+.plans-card h2{
+    text-align: start;
+    font-size: 30px;
+    color: rgb(217 217 194 / 79%);
+    text-shadow: 3px 1px 1px #5865f2;
+}
+
+.plans-card h4{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#1c1c1c;
+}
+
+.align-self-right{
+    align-self: end;
+}

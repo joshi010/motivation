@@ -43,8 +43,10 @@
     width: 70%;
     height: 100%;
     box-sizing: border-box;
-    padding: 10px 0;
+    padding: 10px 10px;
     color: aliceblue;
+    text-rendering: auto;
+    color: #7e7e7e;
 }
 
 .take-action-form fieldset textarea:focus{
