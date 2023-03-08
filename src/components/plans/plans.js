@@ -18,7 +18,7 @@ export default function Plans(){
                     {
                         filteredPlans.map((plan, i) => {
                             return(
-                                <div key={i} style={{backgroundColor: '#eaaf0b' }}>
+                                <div key={i} style={{background: 'linear-gradient(69deg, #000 12%,  rgb(13, 14, 28))' }}>
                                     <div className="plans-card">
                                         <div style={{display: 'flex', flexDirection:'column', gap: '8px'}}>
                                             <h2>{plan.title}</h2>
