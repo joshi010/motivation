@@ -166,6 +166,7 @@
         position: unset;
         justify-content: center;
         margin-top: 50px;
+        padding-bottom: 50px;
     }
 
     .plan-actual-content{
