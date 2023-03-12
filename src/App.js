@@ -28,7 +28,7 @@ const routes = [
     element: <Articles />
   },
   {
-    path: '/plans/:plan',
+    path: '/plans/:planTitle',
     element: <Plan />
   },
   {

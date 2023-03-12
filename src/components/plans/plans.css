@@ -46,14 +46,141 @@
     justify-content: center;
     background-color: #0a0b15;
     box-sizing: border-box;
-    padding: 50px 50px;
-    height: 90vh;
+    padding: 0px 50px 50px;
+    height: 100vh;
     min-height: 90vh;
     width: 80%;
+}
+
+.plan-content{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
 }
 
 .plan-side{
     height: 15vh;
     display: flex;
     align-items: end;
+}
+
+.image-and-list-plans{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.photo-media-plans{
+    max-width: 90%;
+}
+
+.photo-media-plans-2{
+    max-width: 50%;
+}
+
+.photo-media-cont{
+    width: 100%;
+}
+
+.photo-media-cont img{
+    width: 100%;
+}
+
+.plans-font-size{
+    font-size: 20px;
+    max-width: 50%;
+}
+
+.list-plans{
+    color: #c1c1c1;
+}
+
+.next-plan-buttons{
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    gap: 8px;
+}
+
+.list-plans-cont{
+    width: 50%;
+}
+
+.questionarie-plans{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.input-plan-quest{
+    all: unset;
+    border-bottom: 1px solid #c1c1c1;
+    background-color: transparent;
+    height: 50px;
+    width: 40%;
+    color: #c1c1c1c2;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .plan-actual-content{
+        right: 0;
+        width: 100%;
+        padding: 0 10px ;
+    }
+
+    .plans-font-size{
+        max-width: 100%;
+    }
+
+    .plan-content{
+        justify-content: center;
+    }
+
+    .photo-media-plans{
+        width: 100%;
+    }
+
+    .photo-media-plans-2{
+        max-width: 100%;
+    }
+
+    .next-plan-buttons{
+        right: 5px;
+    }
+
+    .image-and-list-plans{
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 80%;
+    }
+
+    .list-plans-cont{
+        width: 100%;
+    }
+
+    .next-plan-buttons{
+        position: unset;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .plan-actual-content{
+        overflow-y: scroll;
+    }
+
+    .section-title-plans{
+        padding: 108px 0 5px;
+    }
+
+    .questionarie-plans{
+        gap: 50px
+    }
+
+    .input-plan-quest{
+        width: 100%;
+    }
 }

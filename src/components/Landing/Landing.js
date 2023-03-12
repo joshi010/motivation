@@ -22,7 +22,7 @@ export default function Landing() {
                     <div className="title-holder">
                         <Phrase />
                     </div>
-                    <a href="#secs" className="link-button">Take Action</a>
+                    <Link to='/plans' className="link-button">Take Action</Link>
                 </header>
                 <div id="secs" className="bg-default" style={{padding: '50px 0'}}>                
                     <div style={{marginBottom: 100}}>

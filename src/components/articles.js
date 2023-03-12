@@ -10,7 +10,7 @@ export default function Articles() {
     return(
         <div className="vh-100 bg-default center-x">
             <Helmet>
-                <title>Expert Advice and Motivation: BetterSteps' Comprehensive Article Library</title>
+                <title>Expert Advice and Motivation: BetterSteps Comprehensive Article Library</title>
                 <meta name="description" content="Get expert advice and motivation on personal development, health, and wellness from BetterSteps' comprehensive article library. Discover practical tips and insights to improve your life today."/>
             </Helmet>
             <section className="margins">

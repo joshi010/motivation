@@ -11,7 +11,7 @@ export default function Article() {
     const history = useNavigate();
 
     const goBack = () => {
-        history(-1);
+        console.log(history(-1));
     }
 
 
@@ -25,7 +25,7 @@ export default function Article() {
                 <div style={{backgroundImage: `url(${article.image})`, backgroundPositionY:'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
                     <h1 className="title-spacing">{article.title}</h1>
                 </div>
-                <span><button style={{all: 'unset', cursor:'pointer', textDecoration:'underline', color:'#5865f2'}} onClick={goBack}>{'< '}Go Back</button></span>
+                <span><Link style={{all: 'unset', cursor:'pointer', textDecoration:'underline', color:'#5865f2'}} to='/articles'>{'< '}Go Back</Link></span>
                 <p>{article.body}</p>
             </div>
             <div className="link-pupop">
