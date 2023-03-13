@@ -62,6 +62,12 @@ export default function Plan(){
         setSlidesArr(newSlider);
     }
 
+    const handlekeydown = (e) => {
+        if(e.key === 'Enter'){
+            handleNext();
+        }
+    }
+
     const generatePdf = () => {
         const doc = new jsPDF();
 // Set font style for the title and bold text
@@ -277,7 +283,7 @@ export default function Plan(){
                                                 ) : plan.question ? (
                                                     <div className="questionarie-plans">
                                                         <div className="plans-font-size" style={{textAlign: 'justify'}}><p>{plan.question}</p></div>
-                                                        <input className="input-plan-quest" placeholder="Your Answer Here" type="text" name={plan.key} onChange={handleChange}></input>
+                                                        <input className="input-plan-quest" placeholder="Your Answer Here" type="text" name={plan.key} onChange={handleChange} onKeyDown={handlekeydown}></input>
                                                     </div>
                                                 ) : plan.date ? (
                                                     <div>

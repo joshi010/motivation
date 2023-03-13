@@ -8,6 +8,7 @@ const Articles = lazy(() => import('./components/articles'));
 const Arcicle = lazy(() => import('./components/article'));
 const Plans = lazy(() => import('./components/plans/plans'));
 const Plan = lazy(() => import('./components/plans/plan'));
+const Builder = lazy(() => import('./components/planBuilder/builder'));
 const NotFound = lazy(() => import('./components/notfound'));
 
 const routes = [
@@ -26,6 +27,10 @@ const routes = [
   {
     path: '/articles',
     element: <Articles />
+  },
+  {
+    path: 'plans/builder',
+    element: <Builder />
   },
   {
     path: '/plans/:planTitle',
