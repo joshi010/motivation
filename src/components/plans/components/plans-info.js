@@ -35,17 +35,17 @@ export const plans = {
             },
             {
                 header: '1. Identify your goal',
-                question: 'Write what is that that you are trying to achieve. It can be as simple as: Quit Smoking.',
+                content: 'Write what is that that you are trying to achieve. It can be as simple as: Quit Smoking.',
                 key: 'identify'
             },
             {
                 header: '1. Why Are You Doing this?',
-                question: 'Knowing your reasons will make you stay motivated and on track. Some examples may be: "It is affecting my health", "To have a better future", "For my family", or simply "For myself".',
+                content: 'Knowing your reasons will make you stay motivated and on track. Some examples may be: "It is affecting my health", "To have a better future", "For my family", or simply "For myself".',
                 key: 'why'
             },
             {
                 header: '2. Identify Your Triggers',
-                question: 'Once you have quit smoking, certain locations and circumstances can trigger memories and make it difficult for you to remain smoke-free. Some examples could be: A specific social situation, Retraction, Wating on the bus ride or loneliness. Please be specific.',
+                content: 'Once you have quit smoking, certain locations and circumstances can trigger memories and make it difficult for you to remain smoke-free. Some examples could be: A specific social situation, Retraction, Wating on the bus ride or loneliness. Please be specific.',
                 key: 'triggers'
             },
             {
@@ -55,12 +55,12 @@ export const plans = {
             },
             {
                 header: '3. Anticipate and Plan for Obstacles',
-                question: 'Write a new hobby or thing that you are going to use to replace smoking. Please be specific. Example: Playing the guitar.',
+                content: 'Write a new hobby or thing that you are going to use to replace smoking. Please be specific. Example: Playing the guitar.',
                 key: 'hobby'
             },
             {
                 header: '3. Anticipate and Plan for Obstacles',
-                question: 'Write the name of a person, it could be a friend or family member that you know would help when you are about to relapse.',
+                content: 'Write the name of a person, it could be a friend or family member that you know would help when you are about to relapse.',
                 key: 'obstacle'
             },
             {
@@ -69,22 +69,22 @@ export const plans = {
             },
             {
                 header: 'What Are You Achieving in a Week?',
-                question: 'Example: I\'m going to throw out all of my cigarette packs.',
+                content: 'Example: I\'m going to throw out all of my cigarette packs.',
                 key: 'week'
             },
             {
                 header: 'What Are You Achieving in a Month?',
-                question: 'Example: I\'m going to learn three guitar songs.',
+                content: 'Example: I\'m going to learn three guitar songs.',
                 key: 'month'
             },
             {
                 header: 'What Are You Achieving in two Months?',
-                question: 'Example: Going everyday on a walk',
+                content: 'Example: Going everyday on a walk',
                 key: 'month2',
             },        
             {
                 header: 'What Are You Achieving in three Months?',
-                question: 'Example: Being smoke free for 3 months.',
+                content: 'Example: Being smoke free for 3 months.',
                 key: 'month3'
             },
             {
@@ -101,16 +101,19 @@ export const plans = {
         ]
     },
     "overcoming-procrastination-step-by-step": {
-        image: '',
         title: 'Overcoming Procrastination: A Step-by-Step Guide',
         description: 'Our plan provides guidance and support to help you overcome procrastination and achieve your goals, from identifying triggers to developing effective strategies for action.',
         slug: 'overcoming-procrastination-step-by-step',
         content: [
-            {   header: 'In Production',
+            {
+                header: 'In production',
                 content: '"Patience is not simply the ability to wait - it\'s how we behave while we\'re waiting." - Joyce Meyer'
             }
+        ]
+    }
 
-        ],
+
+
+
 
     }
-}

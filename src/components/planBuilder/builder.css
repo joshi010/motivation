@@ -29,12 +29,52 @@
 }
 
 .slides-builder{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    gap: 3px;
     max-width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
-.slides-header{
+.slides-builder input{
+    outline: none;
+    padding: 10px;
+}
 
+.slides-builder textarea{
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    height: 150px;
+    padding: 10px;
+}
+
+.slides-builder select{
+    outline: none;
+    padding: 10px;
+}
+
+.render-code{
+    background-color: black;
+    color: green;
+    padding: 10px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.copy-to-clip-board-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5865f2;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:700px){
+
+    .slides-builder{
+        max-width: 100%;
+    }
 }
 

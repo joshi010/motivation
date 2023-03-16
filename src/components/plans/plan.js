@@ -244,7 +244,18 @@ export default function Plan(){
                                                         
                                                 </>
                                                 
-                                            ) : plan.content ? (
+                                            ) :plan.key ? (
+                                                <div className="questionarie-plans">
+                                                    <div className="plans-font-size" style={{textAlign: 'justify'}}><p>{plan.content}</p></div>
+                                                    <input className="input-plan-quest" placeholder="Your Answer Here" type="text" name={plan.key} onChange={handleChange} onKeyDown={handlekeydown}></input>
+                                                </div>
+                                            ) : plan.date ? (
+                                                <div>
+                                                    <input type="date" name={plan.key} onChange={handleChange}  />
+                                                </div>
+                                            ) :
+                                                                                        
+                                            plan.content ? (
                                                 <div className="plans-font-size" style={{marginTop: 10, maxWidth: '100%'}}>
                                                     <p style={{textAlign:'justify'}}>
                                                         {plan.content}
@@ -280,9 +291,9 @@ export default function Plan(){
                                                         ) : console.log('no-media')
                                                     }
                                                 </div>
-                                                ) : plan.question ? (
+                                                ) : plan.key ? (
                                                     <div className="questionarie-plans">
-                                                        <div className="plans-font-size" style={{textAlign: 'justify'}}><p>{plan.question}</p></div>
+                                                        <div className="plans-font-size" style={{textAlign: 'justify'}}><p>{plan.content}</p></div>
                                                         <input className="input-plan-quest" placeholder="Your Answer Here" type="text" name={plan.key} onChange={handleChange} onKeyDown={handlekeydown}></input>
                                                     </div>
                                                 ) : plan.date ? (
