@@ -104,8 +104,11 @@ p{
     display: flex;
     justify-content: end;
     position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1000;
     bottom: 50px;
-    right: 50px;
+    width: calc(80% - 100px);
     gap: 8px;
 }
 
@@ -134,7 +137,10 @@ p{
     .plan-actual-content{
         right: 0;
         width: 100%;
-        padding: 0 10px ;
+        padding: 0 10px;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        align-content: center;
     }
 
     .plans-font-size{
@@ -153,10 +159,6 @@ p{
         max-width: 100%;
     }
 
-    .next-plan-buttons{
-        right: 5px;
-    }
-
     .image-and-list-plans{
         flex-direction: column-reverse;
         align-items: center;
@@ -169,10 +171,13 @@ p{
     }
 
     .next-plan-buttons{
-        position: unset;
+        position: fixed;
+        width: 100%;
         justify-content: center;
-        margin-top: 50px;
-        padding-bottom: 50px;
+        z-index: 1000;
+        height: 10%;
+        right: 0;
+        bottom: 0;
     }
 
     .plan-actual-content{
@@ -189,5 +194,16 @@ p{
 
     .input-plan-quest{
         width: 100%;
+        align-self: end;
+    }
+
+    .link-button{
+        height: 25px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .plan-actual-content{
+        padding: 40% 0;
     }
 }

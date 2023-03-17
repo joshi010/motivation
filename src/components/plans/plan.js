@@ -244,15 +244,15 @@ export default function Plan(){
                                                         
                                                 </>
                                                 
-                                            ) :plan.key ? (
+                                            )
+
+                                            : plan.key ? (
+                                                <>
                                                 <div className="questionarie-plans">
                                                     <div className="plans-font-size" style={{textAlign: 'justify'}}><p>{plan.content}</p></div>
-                                                    <input className="input-plan-quest" placeholder="Your Answer Here" type="text" name={plan.key} onChange={handleChange} onKeyDown={handlekeydown}></input>
                                                 </div>
-                                            ) : plan.date ? (
-                                                <div>
-                                                    <input type="date" name={plan.key} onChange={handleChange}  />
-                                                </div>
+                
+                                                </>
                                             ) :
                                                                                         
                                             plan.content ? (
@@ -279,14 +279,13 @@ export default function Plan(){
                                                     {
                                                         plan.media ? (
                                                             <div className="photo-media-plans-2">
-                                                                {plan.media.map((x, i) => {
-                                                                    return(
-                                                                        <div className="photo-media-cont" key={i}>
-                                                                            <img src={x} />
-                                                                        </div>
-                                                                        )
-                                                                    })
-                                                                }
+                                                                
+                                                                <div className="photo-media-cont">
+                                                                    <img src={plan.media} />
+                                                                </div>
+                                                                        
+                                                                    
+                                                                
                                                             </div>
                                                         ) : console.log('no-media')
                                                     }
@@ -318,23 +317,33 @@ export default function Plan(){
                                             </div>
                                         ) : console.log('no-side')
                                     }
-                                    <div className="next-plan-buttons">
-                                        {
-                                            index !== 0 ? (
-                                                <button onClick={handleBack} className="link-button" >Back</button>
-                                            ) : 0
-                                        }
-                                        {
-                                            index == length2 ? (
-                                                <button onClick={generatePdf} className="link-button">Print Action Plan</button>
-                                                
-                                            ) : <button onClick={handleNext} className="link-button">Next</button>
-
-                                        }
-                                    </div>
+                                    {   
+                                        plan.date ? (
+                                            <div>
+                                                <input type="date" name={plan.key} onChange={handleChange}  />
+                                            </div>
+                                        ) :
+                                        plan.key ? (
+                                            <input className="input-plan-quest" placeholder="Your Answer Here" type="text" name={plan.key} onChange={handleChange} onKeyDown={handlekeydown}></input>
+                                        ) : ''
+                                    }
                                 </div>
                             )
                         })
+                    }
+                </div>
+                <div className="next-plan-buttons">
+                    {
+                        index !== 0 ? (
+                            <button onClick={handleBack} className="link-button" >Back</button>
+                        ) : 0
+                    }
+                    {
+                        index == length2 ? (
+                            <button onClick={generatePdf} className="link-button">Print Action Plan</button>
+                            
+                        ) : <button onClick={handleNext} className="link-button">Next</button>
+
                     }
                 </div>
             </div>

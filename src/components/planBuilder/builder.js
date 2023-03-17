@@ -89,7 +89,7 @@ export default function Builder() {
 
                             ) : 
                                 <div style={{width: '100%', display:'flex', justifyContent:'center'}}>
-                                    <button style={{margin: '0 auto'}} className="link-button" onClick={renderCode}>Render</button>
+                                    <button style={{margin: '0 auto', backgroundColor: 'black', color:'green'}} className="link-button" onClick={renderCode}>Render</button>
                                 </div>
                             
                         ) : ''
@@ -98,7 +98,7 @@ export default function Builder() {
                         click ? (
                             <div style={{display:'flex'}}>
                                 <p ref={textRef} className="render-code" style={{width:'90%'}}>
-                                    {`${JSON.stringify(titles)}, content:[${renderedcode}]` }
+                                    {`"${titles.slug}": {${JSON.stringify(titles).replace(/[{}]/g, '')}, content:[${renderedcode}]}` }
                                 </p>
                                 <div className="copy-to-clip-board-button" onClick={handleCopy} style={{width:'10%'}}>
                                     Copy

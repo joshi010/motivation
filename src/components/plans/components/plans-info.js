@@ -8,28 +8,28 @@ export const plans = {
         slug: 'stop-smoking-step-by-step',
         content: [
             {   header: 'Introduction', 
-                content: 'Hey! We are glad you reached out to us for help with your smoking addiction. We want you to know that we support you in making a positive change for your health. Right now, you may not be ready to quit smoking, but that is okay. It is important to take the time to think about your smoking habits and the reasons why you want to quit. When you are ready, we can work together on a plan to help you move forward. Remember, you are not alone in this journey and we are here for you whenever you need it. Stay strong!',
+                content: 'Hey! We are glad you reached out to us for help with your smoking addiction. We want you to know that we support you in making a positive change for your health. Remember, you are not alone in this journey and we are here for you whenever you need it. Stay strong!',
                 side: 'Here is some information about smoking and its effects on your health. As you may already know, smoking is linked to many serious health problems, including: lung cancer, heart disease, and stroke.'
             },
             {
                 header: 'Background',
-                media: ['https://media.licdn.com/dms/image/C4D12AQFuBSPI5yEzkg/article-cover_image-shrink_720_1280/0/1607698609857?e=2147483647&v=beta&t=5zScZVqbkQ6daRy9vJqxgeg9_guh3XBrqpFZejXYIb8'],
+                media: 'https://media.licdn.com/dms/image/C4D12AQFuBSPI5yEzkg/article-cover_image-shrink_720_1280/0/1607698609857?e=2147483647&v=beta&t=5zScZVqbkQ6daRy9vJqxgeg9_guh3XBrqpFZejXYIb8',
                 content: 'Before you can take control of your life and overcome addiction, it is crucial to identify your position in the Transtheoretical Model (TTM) and have a comprehensive understanding of how addiction works. However, there is no need to worry because we will guide you through these two essential tools quickly and help you get back on track.'
 
             },
             {
                 header: 'Transtheoretical Model (TTM)',
-                media: ['https://www.verywellmind.com/thmb/Dr649Q9j81tFQFUMpjaPyk_gwmc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/preparation-569fd2203df78cafda9e7ccd.jpg'],
+                media: 'https://www.verywellmind.com/thmb/Dr649Q9j81tFQFUMpjaPyk_gwmc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/preparation-569fd2203df78cafda9e7ccd.jpg',
                 content: 'The Transtheoretical Model (TTM) helps us understand how people change their behavior in stages. It shows us that change is a process that takes time, so don\'t worry if you do not see immediate change. It is used in addiction treatment but works for any kind of behavior change. In the next slides we are going to dive in the preparation step, which is a key part of the process.'
             },
             {
                 header: 'Preparation Stage',
-                media: ['https://www.xero.com/content/dam/xero/pilot-images/guides/planning---performance/Plan-Performance-Plans-Hero.1646877603214.png'],
+                media: 'https://www.xero.com/content/dam/xero/pilot-images/guides/planning---performance/Plan-Performance-Plans-Hero.1646877603214.png',
                 content: 'Right now you are entering the Preparation Stage, in this stage you are going to set up a goal, make a plan and follow it, but don\'t worry, we will be by your side in this journey.'
             },
             {
                 header: 'How do I make a plan?',
-                media: ['https://www.xero.com/content/dam/xero/pilot-images/guides/planning---performance/Plan-Performance-Plans-Hero.1646877603214.png'],
+                media: 'https://www.xero.com/content/dam/xero/pilot-images/guides/planning---performance/Plan-Performance-Plans-Hero.1646877603214.png',
                 list: ['Identify your goal', 'Identify your Triggers', 'Break your goal into small steps', 'Anticipate and plan for obstacles', 'Identify sources of support'],
                 
             },
@@ -110,10 +110,10 @@ export const plans = {
                 content: '"Patience is not simply the ability to wait - it\'s how we behave while we\'re waiting." - Joyce Meyer'
             }
         ]
-    }
+    },
 
 
 
 
 
-    }
+}
