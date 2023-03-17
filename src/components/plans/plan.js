@@ -223,14 +223,14 @@ export default function Plan(){
                                                     {
                                                         plan.media ? (
                                                             <div className="photo-media-plans">
-                                                                {plan.media.map((x, i) => {
-                                                                    return(
-                                                                        <div className="photo-media-cont" key={i}>
-                                                                            <img src={x} />
-                                                                        </div>
-                                                                        )
-                                                                    })
-                                                                }
+                                                                
+                                                                    
+                                                                <div className="photo-media-cont" >
+                                                                    <img src={plan.media} />
+                                                                </div>
+                                                                       
+                                                                   
+                                                                
                                                             </div>
                                                         ) : console.log('no-media')
                                                     }
