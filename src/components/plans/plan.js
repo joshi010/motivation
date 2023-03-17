@@ -5,6 +5,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import './plans.css';
 import { jsPDF } from "jspdf";
 import { Helmet } from "react-helmet";
+import NotFound from "../notfound";
 
 export default function Plan(){
     const plans = useSelector(selectPlans);
@@ -187,9 +188,13 @@ export default function Plan(){
     }
 
 
-    return(
+    return plan ? (
 
         <div className="vh-100 bg-default" style={{display: 'flex', alignItems: 'center'}}>
+            <Helmet>
+                <title>{plan.title}</title>
+                <meta name="description" content={plan.description}></meta>
+            </Helmet>
             <div className="margins">
                 <div className="plan-info-container section-title"> 
                     {
@@ -348,5 +353,5 @@ export default function Plan(){
                 </div>
             </div>
         </div>
-    )
+    ) : <NotFound></NotFound>
 }

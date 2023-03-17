@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import {selectArticles} from './article-slice';
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import NotFound from "./notfound";
 
 export default function Article() {
     const articles = useSelector(selectArticles);
@@ -32,7 +33,7 @@ export default function Article() {
                 <Link className="link-button" to='/plans'>Break Addictions</Link>
             </div>
         </div>
-    ) : <p>Not found</p>
+    ) : <NotFound></NotFound>
 
 
 } 

@@ -69,7 +69,6 @@ nav{
     align-items: center;
     justify-content: center;
     list-style-type: none;
-    height: 50vh;
     gap: 15px;
     z-index: 1;
 }
@@ -99,6 +98,7 @@ li{
         right:-645px;
         flex-direction: column;
         gap: 50px;
+        height: 50vh;
         padding: 50px;
         background-color: #161616;
         font-size: 25px;

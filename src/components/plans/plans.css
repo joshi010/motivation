@@ -7,6 +7,7 @@ p{
     flex-direction: column;
     box-sizing: border-box;
     padding: 10px 20px;
+    min-height: 170px;
     gap: 15px;
     text-align: justify;
 }
@@ -141,6 +142,10 @@ p{
         display: grid;
         grid-template-rows: repeat(4, 1fr);
         align-content: center;
+    }
+
+    .plans-card{
+        min-height: 326px;
     }
 
     .plans-font-size{
