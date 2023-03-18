@@ -11,6 +11,7 @@ const Plan = lazy(() => import('./components/plans/plan'));
 const Builder = lazy(() => import('./components/planBuilder/builder'));
 const NotFound = lazy(() => import('./components/notfound'));
 const Tools = lazy(() => import('./components/tools/tools'));
+const ToolsDynamic = lazy(() => import('./components/tools/toolsDynamic'))
 
 const routes = [
   {
@@ -34,8 +35,12 @@ const routes = [
     element: <Tools />
   },
   {
-    path: 'plans/builder',
+    path: '/plans/builder',
     element: <Builder />
+  },
+  {
+    path: '/tools/:tool',
+    element: <ToolsDynamic props="tools/:tool"/>
   },
   {
     path: '/plans/:planTitle',

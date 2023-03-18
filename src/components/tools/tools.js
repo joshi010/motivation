@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { videos } from "./videoplayer/videos-info";
 import { Helmet } from "react-helmet";
+import { toolsList } from "./tools-info";
 import './tools.css';
+import { Link } from "react-router-dom";
 
 export default function Tools() {
     const [isClicked, setIsClicked] = useState(false);
@@ -54,6 +56,19 @@ export default function Tools() {
                         <button onClick={handleClick} className="link-button">Motivate Me</button>
 
                     </div>
+                </div>
+
+                <div>
+                    {
+                        toolsList.map((x, i) => {
+                            return (
+                                <div className="tool-element-list" key={i}>
+                                    <h3>{x.name}</h3>
+                                    <Link to={x.link} className="link-button" style={{display:'block'}}>Start</Link>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
 
             </div>
