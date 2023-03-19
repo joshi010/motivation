@@ -21,7 +21,7 @@ export default function TimeManagement(){
         setTask((prev) => ({...prev, id: Date.now(), [name]: value}));
     }
  
-    const [name, setNames] = useState([]); 
+    const [name, setNames] = useState([{title: 'Add a task and tap to remove', time: 0}]); 
     const handleSubmit = (event) => {
         event.preventDefault();
         if(!task.title) return;
@@ -35,7 +35,9 @@ export default function TimeManagement(){
     useEffect(() => {
         if(i == 0) {
             const store = localStorage.getItem('tasks');
-            setNames(JSON.parse(store));
+            if(store) {
+                setNames(JSON.parse(store));
+            }
         } else {
             localStorage.setItem('tasks', JSON.stringify([...name]));
         }

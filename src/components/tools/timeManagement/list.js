@@ -11,7 +11,7 @@ export default function List({name, handleDelete}) {
         <div style={{marginTop:10}} className="list-storage">
 
             {   
-                
+                name ? (
 
                     name.map((x) => {
                         return(
@@ -22,12 +22,8 @@ export default function List({name, handleDelete}) {
                                 <div className="task-time">{x.time} min</div>
                             </div>
                         </div>
-                    )
-                    
-                }
-                
-                )
-        
+                        )
+                    })) : ''        
             }
         </div>
     )
