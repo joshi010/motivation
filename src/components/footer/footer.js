@@ -8,6 +8,7 @@ export default function Footer() {
     return(
         <footer>
 
+
             <div className="about-us">
                 <div>
                     <h3>Featured Articles</h3>
@@ -18,15 +19,7 @@ export default function Footer() {
                         <li><Link className="footer-link" to="/articles/from-inspiration-to-action" title="From Inspiration to Action: How to Achieve Your Goals">From Inspiration to Action: How to Achieve Your Goals</Link></li>                    
                     </ul>
                 </div>
-
-                {/* <div>
-                    <h3>Socials</h3>
-                    <div>
-                    
-                    </div>
-                </div> */}
             </div>
-
             <div className="about-us formDataFooter">
                 <div>
                     <h3>Your Words of Encouragement</h3>
@@ -34,6 +27,7 @@ export default function Footer() {
                 </div>
                 <Form />
             </div>
+            <div style={{gridColumn:'1/3',marginTop:50}}>©2023</div>
 
 
         </footer>

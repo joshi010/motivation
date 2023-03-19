@@ -12,9 +12,11 @@ export default function Articles() {
             <Helmet>
                 <title>Expert Advice and Motivation: BetterSteps Comprehensive Article Library</title>
                 <meta name="description" content="Get expert advice and motivation on personal development, health, and wellness from BetterSteps' comprehensive article library. Discover practical tips and insights to improve your life today."/>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8147046340459290"
+     crossorigin="anonymous"></script>
             </Helmet>
             <section className="margins">
-                <h1 style={{padding: '50px 0'}}>Articles</h1>
+                <h1 className="section-title">Articles</h1>
                 <div className="grid-cont">
                     {filteredArticles.map((article) => {
                         return(
@@ -34,7 +36,7 @@ export default function Articles() {
                     })}
                 </div>
             </section>
-            
+
         </div>
     )
 }

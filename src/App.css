@@ -219,6 +219,22 @@ footer{
     }
 
     footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 70px;
+    }
+
+    .section-title{
+        padding: 100px 0;
+    }
+
+    .link-button:hover{
+        background-color: #5865f2;
+    }
+
+    .link-button:active{
+        background-color: #c1c1c1;
     }
 }

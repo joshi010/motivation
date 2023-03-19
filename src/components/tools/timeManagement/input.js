@@ -16,7 +16,7 @@ export default function Input({handleSubmit, handleChange, task}){
             <input 
                 name="time"
                 type="number"
-                placeholder={'Time'}
+                placeholder={'Min.'}
                 value={task.time || ''}
                 onChange={handleChange}
                 min='5'
@@ -24,7 +24,7 @@ export default function Input({handleSubmit, handleChange, task}){
                 required
             />
                 
-            <button type="submit" className="link-button" style={{marginTop:2, gridColumn:'1/4'}}>submit</button>
+            <button type="submit" className="link-button" style={{marginTop:2, gridColumn:'1/4', height:'100%'}}>submit</button>
         </form>
     )
 }

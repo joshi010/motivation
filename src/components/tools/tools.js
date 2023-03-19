@@ -12,9 +12,11 @@ export default function Tools() {
     useEffect(() => {
 
         if(isClicked){
+
             const videoElement = document.getElementById('video');  
             videoElement.currentTime = 0;
             videoElement.load();
+            videoElement.play()
         }
 
     }, [random]);
@@ -27,6 +29,7 @@ export default function Tools() {
     }
 
 
+    
 
     return(
         <div className="bg-default vh-100">
@@ -45,9 +48,10 @@ export default function Tools() {
                         {
                             isClicked ? (
                                 <div className="video-motivation-container">
-                                        <video id='video' autoplay controls>
+                                        <video id='video' autoplay controls playsInline>
                                             <source src={videos[random]} type="video/mp4"/>
                                         </video>
+                                    
                                 </div>
                             ) : ''
                         }

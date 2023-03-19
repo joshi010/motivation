@@ -11,9 +11,7 @@ export default function Article() {
     const article = articles[title];
     const history = useNavigate();
 
-    const goBack = () => {
-        console.log(history(-1));
-    }
+
 
 
     return article ? (
@@ -21,6 +19,8 @@ export default function Article() {
             <Helmet>
                 <title>{article.title}</title>
                 <meta name="description" content="Learn how to get out of addictions and become the best version of yourself in this article"></meta>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8147046340459290"
+     crossorigin="anonymous"></script>
             </Helmet>
             <div className="margins">
                 <div style={{backgroundImage: `url(${article.image})`, backgroundPositionY:'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
@@ -32,6 +32,9 @@ export default function Article() {
             <div className="link-pupop">
                 <Link className="link-button" to='/plans'>Break Addictions</Link>
             </div>
+
+
+
         </div>
     ) : <NotFound></NotFound>
 

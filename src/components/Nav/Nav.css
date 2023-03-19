@@ -103,7 +103,7 @@ li{
         background-color: #161616;
         font-size: 25px;
         font-weight: 700;
-        transition: all 0.3s;
+        transition: all 0.2s;
     }
 
     .list-nav-active{
