@@ -20,15 +20,6 @@ export default function Nav() {
                 <li onClick={handleClick}><NavLink className="naving" to='/articles'>Articles</NavLink></li>
                 <li onClick={handleClick}><NavLink className="naving" to='/plans'>Plans</NavLink></li>
                 <li onClick={handleClick}><NavLink className="naving" to='/tools'>Tools</NavLink></li>
-
-                <li style={{height: 10}} className="close" onClick={handleClick}>
-                    <div id="cl-1" className="close-line">
-
-                    </div>
-                    <div id="cl-2" className="close-line">
-
-                    </div>
-                </li>
             </ul>
 
             <div className="ham" onClick={handleClick}>

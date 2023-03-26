@@ -21,7 +21,7 @@ export default function TimeManagement(){
         setTask((prev) => ({...prev, id: Date.now(), [name]: value}));
     }
  
-    const [name, setNames] = useState([{title: 'Add a task and tap to remove', time: 0}]); 
+    const [name, setNames] = useState([{title: 'Add a task and click to remove', time: 0}]); 
     const handleSubmit = (event) => {
         event.preventDefault();
         if(!task.title) return;
@@ -33,7 +33,7 @@ export default function TimeManagement(){
     const [time, setTime] = useState(0);
     const [i, setI] = useState(0);
     useEffect(() => {
-        if(i == 0) {
+        if(i === 0) {
             const store = localStorage.getItem('tasks');
             if(store) {
                 setNames(JSON.parse(store));
@@ -67,6 +67,14 @@ export default function TimeManagement(){
         setShuffled(true);
     }
 
+    
+    const [startTimer, setStartTimer] = useState(false);
+    const handleStart = () => {
+        setStartTimer(prev => !prev);
+    }
+
+    
+
     return(
         <div className="vh-100 bg-default">
             <Helmet>
@@ -80,7 +88,7 @@ export default function TimeManagement(){
                     ) : ''
                 }
                 <div style={{color:'#c1c1c1', marginTop:20}}>Total Time: {time} min.</div>
-                <List name={name} handleDelete={handleDelete}/>
+                <List name={name} handleDelete={handleDelete} startTimer={startTimer}/>
 
                 <div className="time-management-buttons-container">
                     <div className="add-task" onClick={handleShuffle}>
@@ -91,7 +99,7 @@ export default function TimeManagement(){
                     </div>
                     {
                         shuffled ? (
-                        <div className="add-task" id="start">
+                        <div className="add-task" id="start" onClick={handleStart}>
                             Start
                         </div>
 

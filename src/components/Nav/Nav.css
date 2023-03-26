@@ -85,6 +85,9 @@ li{
 
     nav{
         justify-content: end;
+        height: 60px;
+        bottom: 0;
+        z-index: 2000;
     }
 
     .ham{
@@ -94,7 +97,7 @@ li{
 
     .lists-nav{
         position: absolute;
-        top: 50px;
+        bottom: 60px;
         right:-645px;
         flex-direction: column;
         gap: 50px;
@@ -104,6 +107,7 @@ li{
         font-size: 25px;
         font-weight: 700;
         transition: all 0.2s;
+        z-index: 1000;
     }
 
     .list-nav-active{

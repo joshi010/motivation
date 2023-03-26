@@ -19,7 +19,7 @@ export default function Input({handleSubmit, handleChange, task}){
                 placeholder={'Min.'}
                 value={task.time || ''}
                 onChange={handleChange}
-                min='5'
+                min='1'
                 id="numbers"
                 required
             />

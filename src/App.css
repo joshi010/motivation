@@ -227,7 +227,7 @@ footer{
     }
 
     .section-title{
-        padding: 100px 0;
+        padding: 60px 0;
     }
 
     .link-button:hover{
@@ -236,5 +236,9 @@ footer{
 
     .link-button:active{
         background-color: #c1c1c1;
+    }
+
+    .link-pupop{
+        bottom: 90px;
     }
 }

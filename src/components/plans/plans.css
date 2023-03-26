@@ -182,7 +182,7 @@ p{
         z-index: 1000;
         height: 10%;
         right: 0;
-        bottom: 0;
+        bottom: 60px;
     }
 
     .plan-actual-content{
@@ -190,7 +190,7 @@ p{
     }
 
     .section-title-plans{
-        padding: 108px 0 5px;
+        padding: 60px 0 5px;
     }
 
     .questionarie-plans{
@@ -209,6 +209,12 @@ p{
 
 @media only screen and (max-width: 375px) {
     .plan-actual-content{
-        padding: 40% 0;
+        padding: 0 10px 40%;
+    }
+}
+
+@media only screen and (max-height: 667px) {
+    .plan-actual-content{
+        padding: 20px 10px 40%;
     }
 }
