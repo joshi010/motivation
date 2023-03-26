@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import '../tools.css';
 import NextPopup from "./nextPopup";
 import notif from './finished-task.mp3';
+import FinishedTask from "./finishedTask";
 
 export default function List({name, handleDelete, startTimer}) {
 
     const [prueba, setPrueba] = useState([]);
     const [startCopy, setStartCopy] = useState();
     const [clocking, setClocking] = useState(false);
+    const [finished, setFinished] = useState(false);
     
     useEffect(() => {
         setPrueba([...name]);
@@ -17,8 +19,8 @@ export default function List({name, handleDelete, startTimer}) {
         setStartCopy(startTimer);
     }, [startTimer]);
     
-    const audio = new Audio(notif);
     const handleClick = () => {
+        const audio = new Audio(notif);
         audio.play();
         const copy = [...prueba];
         copy.shift();
@@ -33,35 +35,41 @@ export default function List({name, handleDelete, startTimer}) {
     
     useEffect(() => {
         if(startCopy) {
-            setClocking(false);
-            const startTime = Date.now();
-            const setTime = prueba[0].time*1 * 60000
-            const futureTime = startTime + setTime;
-            const semicircles = document.querySelectorAll('.semicircle');
-           
-            const interval = setInterval(() => {
-                const currentTime = Date.now();
-                const remainingTime = futureTime - currentTime;
-                const angle = (remainingTime / setTime) * 360;
-                // console.log(angle);
-    
-                if(angle > 180) {
-                    semicircles[2].style.display = 'none';
-                    semicircles[0].style.transform = 'rotate(180deg)';
-                    semicircles[1].style.transform = `rotate(${angle}deg)`;
-                } else {
-                    semicircles[2].style.display = 'block';
-                    semicircles[0].style.transform = `rotate(${angle}deg)`;
-                    semicircles[1].style.transform = `rotate(${angle}deg)`;
-                }
-    
-                if(remainingTime < 0) {
-                    clearInterval(interval);
-                    handleClick();
-                    setClocking(true);
-                    
-                }
-            });
+            try{
+                setClocking(false);
+                const startTime = Date.now();
+                const setTime = prueba[0].time*1 * 60000
+                const futureTime = startTime + setTime;
+                const semicircles = document.querySelectorAll('.semicircle');
+               
+                const interval = setInterval(() => {
+                    const currentTime = Date.now();
+                    const remainingTime = futureTime - currentTime;
+                    const angle = (remainingTime / setTime) * 360;
+                    // console.log(angle);
+        
+                    if(angle > 180) {
+                        semicircles[2].style.display = 'none';
+                        semicircles[0].style.transform = 'rotate(180deg)';
+                        semicircles[1].style.transform = `rotate(${angle}deg)`;
+                    } else {
+                        semicircles[2].style.display = 'block';
+                        semicircles[0].style.transform = `rotate(${angle}deg)`;
+                        semicircles[1].style.transform = `rotate(${angle}deg)`;
+                    }
+        
+                    if(remainingTime < 0) {
+                        clearInterval(interval);
+                        handleClick();
+                        setClocking(true);
+                        
+                    }
+                });
+
+            } catch(err) {
+                setFinished(true);
+                console.log(err);
+            }
             
         }
     })
@@ -73,7 +81,7 @@ export default function List({name, handleDelete, startTimer}) {
         <div style={{marginTop:10}} className="list-storage">
 
             {   
-                name ? (
+                prueba ? (
 
                     prueba.map((x) => {
                         return(
@@ -89,11 +97,13 @@ export default function List({name, handleDelete, startTimer}) {
                             </div>
                         </div>
                         )
-                    })) : ''        
+                    })) : <div><h1>Finished</h1></div>        
             }
             
             {
-                clocking ? (
+                finished ? (
+                    <FinishedTask />
+                ) : clocking ? (
                     <NextPopup  handleNext={handleNext} />
                 ) : ''
             }
